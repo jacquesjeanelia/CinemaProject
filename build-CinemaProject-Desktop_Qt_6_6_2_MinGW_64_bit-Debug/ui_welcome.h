@@ -32,7 +32,7 @@ public:
         Welcome->resize(400, 300);
         HelloLabel = new QLabel(Welcome);
         HelloLabel->setObjectName("HelloLabel");
-        HelloLabel->setGeometry(QRect(10, 10, 63, 20));
+        HelloLabel->setGeometry(QRect(10, 10, 381, 20));
         WelcomeLabel = new QLabel(Welcome);
         WelcomeLabel->setObjectName("WelcomeLabel");
         WelcomeLabel->setGeometry(QRect(150, 70, 71, 20));

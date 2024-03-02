@@ -13,7 +13,11 @@ class Welcome : public QDialog
 
 public:
     explicit Welcome(QWidget *parent = nullptr);
+    int setValue(int x);
     ~Welcome();
+
+private slots:
+    void on_LogoutButton_clicked();
 
 private:
     Ui::Welcome *ui;
