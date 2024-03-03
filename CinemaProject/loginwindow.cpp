@@ -24,14 +24,16 @@ void LoginWindow::on_LoginPushButton_clicked()
     QString pass = ui->PasswordLineEdit->text();
 
 
-    for (int x = 0; x<100;x++)
+    for (int x = 0; x<usersCount;x++)
     {
         if((name==usernames[x])&&(pass==passwords[x]))
         {
             index = x;
-            Welcome* welcome = new Welcome(name,ages[x], this);
+            Welcome* welcome = new Welcome(this);
+            welcome ->setIndex(x);
             welcome->show();
             ui->ErrorLabel->setVisible(false);
+            hide();
 
         }
         else
@@ -46,5 +48,6 @@ void LoginWindow::on_RegisterPushButton_clicked()
 {
     registerwindow* regwindow = new registerwindow();
     regwindow ->show();
+    hide();
 }
 

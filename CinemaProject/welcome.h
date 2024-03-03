@@ -12,8 +12,8 @@ class Welcome : public QDialog
     Q_OBJECT
 
 public:
-    explicit Welcome(QString user_name,int _age, QWidget *parent = nullptr);
-    int setValue(int x);
+    explicit Welcome(QWidget *parent = nullptr);
+    void setIndex(int x);
     ~Welcome();
 
 private slots:

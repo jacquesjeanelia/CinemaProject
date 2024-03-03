@@ -3,7 +3,7 @@
 #include "Users.h"
 #include "loginwindow.h"
 
-Welcome::Welcome(QString _username,int _age, QWidget *parent)
+Welcome::Welcome(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::Welcome)
 {
@@ -13,7 +13,7 @@ Welcome::Welcome(QString _username,int _age, QWidget *parent)
     QString username = usernames[index];
     QString age = QString::number(ages[index]);
 
-    ui->HelloLabel->setText("Hello "+ username + ", " + age);
+    //ui->HelloLabel->setText("Hello "+ usernames[x] + ", " + age[x]);
     QPixmap pix (":/new/prefix1/Welcome Image.jpg");
     int w = ui->ImageLabel->width();
     int h = ui->ImageLabel->height();
@@ -25,16 +25,19 @@ Welcome::~Welcome()
     delete ui;
 }
 
-int Welcome::setValue(int x)
+void Welcome::setIndex(int x)
 {
-    return x;
+    ui->HelloLabel->setText("Hello "+ usernames[x] + ", " + QString ::number(ages[x]));
 }
 
 
 void Welcome::on_LogoutButton_clicked()
 {
     hide();
-     LoginWindow *loginWindow = new LoginWindow();
+    LoginWindow *loginWindow = new LoginWindow();
     loginWindow->show();
+
 }
+
+
 

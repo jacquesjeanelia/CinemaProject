@@ -88,10 +88,15 @@ void registerwindow::on_pushButton_clicked()
         passwords[usersCount] = reg_pass;
         ages[usersCount] = age;
 
+        int x = usersCount;
+
         usersCount++;
 
-        Welcome* welcomepage = new Welcome(reg_user,age, this);
-        welcomepage ->show();
+        Welcome* welcome = new Welcome(this);
+        welcome->setIndex(x);
+        welcome ->show();
+        hide();
+        break;
     }
 
 
