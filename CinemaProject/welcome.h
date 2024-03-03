@@ -12,7 +12,7 @@ class Welcome : public QDialog
     Q_OBJECT
 
 public:
-    explicit Welcome(QWidget *parent = nullptr);
+    explicit Welcome(QString user_name,int _age, QWidget *parent = nullptr);
     int setValue(int x);
     ~Welcome();
 

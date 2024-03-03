@@ -1,8 +1,9 @@
 #include "welcome.h"
 #include "ui_welcome.h"
 #include "Users.h"
+#include "loginwindow.h"
 
-Welcome::Welcome(QWidget *parent)
+Welcome::Welcome(QString _username,int _age, QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::Welcome)
 {
@@ -33,5 +34,7 @@ int Welcome::setValue(int x)
 void Welcome::on_LogoutButton_clicked()
 {
     hide();
+     LoginWindow *loginWindow = new LoginWindow();
+    loginWindow->show();
 }
 

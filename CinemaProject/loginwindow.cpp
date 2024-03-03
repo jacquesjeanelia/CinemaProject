@@ -2,7 +2,7 @@
 #include "ui_loginwindow.h"
 #include "Users.h"
 #include "welcome.h"
-
+#include "registerwindow.h"
 LoginWindow::LoginWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::LoginWindow)
@@ -29,7 +29,7 @@ void LoginWindow::on_LoginPushButton_clicked()
         if((name==usernames[x])&&(pass==passwords[x]))
         {
             index = x;
-            Welcome* welcome = new Welcome(this);
+            Welcome* welcome = new Welcome(name,ages[x], this);
             welcome->show();
             ui->ErrorLabel->setVisible(false);
 
@@ -44,6 +44,7 @@ void LoginWindow::on_LoginPushButton_clicked()
 
 void LoginWindow::on_RegisterPushButton_clicked()
 {
-
+    registerwindow* regwindow = new registerwindow();
+    regwindow ->show();
 }
 
