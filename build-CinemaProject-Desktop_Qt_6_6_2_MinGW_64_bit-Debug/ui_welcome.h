@@ -21,7 +21,6 @@ class Ui_Welcome
 {
 public:
     QLabel *HelloLabel;
-    QLabel *WelcomeLabel;
     QLabel *ImageLabel;
     QPushButton *LogoutButton;
 
@@ -29,16 +28,13 @@ public:
     {
         if (Welcome->objectName().isEmpty())
             Welcome->setObjectName("Welcome");
-        Welcome->resize(400, 300);
+        Welcome->resize(347, 300);
         HelloLabel = new QLabel(Welcome);
         HelloLabel->setObjectName("HelloLabel");
         HelloLabel->setGeometry(QRect(10, 10, 381, 20));
-        WelcomeLabel = new QLabel(Welcome);
-        WelcomeLabel->setObjectName("WelcomeLabel");
-        WelcomeLabel->setGeometry(QRect(150, 70, 71, 20));
         ImageLabel = new QLabel(Welcome);
         ImageLabel->setObjectName("ImageLabel");
-        ImageLabel->setGeometry(QRect(20, 69, 361, 161));
+        ImageLabel->setGeometry(QRect(20, 49, 361, 191));
         LogoutButton = new QPushButton(Welcome);
         LogoutButton->setObjectName("LogoutButton");
         LogoutButton->setGeometry(QRect(20, 260, 93, 29));
@@ -52,7 +48,6 @@ public:
     {
         Welcome->setWindowTitle(QCoreApplication::translate("Welcome", "Dialog", nullptr));
         HelloLabel->setText(QCoreApplication::translate("Welcome", "Hello, ", nullptr));
-        WelcomeLabel->setText(QCoreApplication::translate("Welcome", "Welcome", nullptr));
         ImageLabel->setText(QCoreApplication::translate("Welcome", "TextLabel", nullptr));
         LogoutButton->setText(QCoreApplication::translate("Welcome", "Logout", nullptr));
     } // retranslateUi

@@ -12,12 +12,11 @@ Welcome::Welcome(QWidget *parent)
 
     QString username = usernames[index];
     QString age = QString::number(ages[index]);
-
-    //ui->HelloLabel->setText("Hello "+ usernames[x] + ", " + age[x]);
     QPixmap pix (":/new/prefix1/Welcome Image.jpg");
     int w = ui->ImageLabel->width();
     int h = ui->ImageLabel->height();
-    ui->ImageLabel->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
+    //ui->ImageLabel->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
+    ui->ImageLabel->setPixmap(pix.scaled(300,200));
 }
 
 Welcome::~Welcome()
